@@ -218,9 +218,9 @@ Built **ReadyNow!** — a production-ready FEMA emergency preparedness chat assi
 
 ## Roadmap
 
-| Item | Description |
-|---|---|
-| 1 | Complete difficulty assessment logic after successfully guessing a location. |
+| Item | Challenge | Description |
+|---|---|---|
+| 1 | 6 - Case Study | Complete difficulty assessment logic after successfully guessing a location. |
 
 ---
 
