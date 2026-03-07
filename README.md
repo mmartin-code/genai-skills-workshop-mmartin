@@ -205,20 +205,20 @@ Built **ReadyNow!** — a production-ready FEMA emergency preparedness chat assi
 | Challenge | Lesson | Impact |
 |---|---|---|
 | 1 | Always handle 429 rate limits with retry + backoff | Prevents silent failures during Gemini API throttling |
-| 1 | Never break on first is_final_response() — take the last one | Agent needs full event loop to execute tools |
-| 2 | Use Model Armor for enterprise sanitization, custom logic for business rules | Separates security concerns from domain logic |
-| 3 | Use AgentTool() not sub_agents=[] | Root agent retains control; sub_agents causes handoff issues |
-| 3 | Isolate google_search in its own agent | Cannot mix search tools with Python function tools |
-| 4 | Chain agents as nested AgentTool calls | Avoids SequentialAgent/LoopAgent multiple sub-agent errors |
-| 5 | Remove all logger-referencing callbacks before deployment | Logger objects cannot be pickled for Agent Engine serialization |
-| 5 | Include requests in deployment requirements | Custom tools using requests library need it in the container |
-| 6 | Model Armor template reuse across challenges | Create once in Challenge 2, reference in all subsequent challenges |
+| 2 | Never break on first is_final_response() — take the last one | Agent needs full event loop to execute tools |
+| 3 | Use Model Armor for enterprise sanitization, custom logic for business rules | Separates security concerns from domain logic |
+| 4 | Use AgentTool() not sub_agents=[] | Root agent retains control; sub_agents causes handoff issues |
+| 5 | Isolate google_search in its own agent | Cannot mix search tools with Python function tools |
+| 6 | Chain agents as nested AgentTool calls | Avoids SequentialAgent/LoopAgent multiple sub-agent errors |
+| 7 | Remove all logger-referencing callbacks before deployment | Logger objects cannot be pickled for Agent Engine serialization |
+| 8 | Include requests in deployment requirements | Custom tools using requests library need it in the container |
+| 9 | Model Armor template reuse across challenges | Create once in Challenge 2, reference in all subsequent challenges |
 
 ---
 
 ## Roadmap
 
-| Work Item | Description |
+| Item | Description |
 |---|---|
 | 1 | Complete difficulty assessment logic after successfully guessing a location. |
 
